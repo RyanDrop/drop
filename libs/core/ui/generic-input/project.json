@@ -1,0 +1,25 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/core/ui/generic-input/src",
+  "prefix": "drop",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/core/ui/generic-input/src/test.ts",
+        "tsConfig": "libs/core/ui/generic-input/tsconfig.spec.json",
+        "karmaConfig": "libs/core/ui/generic-input/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/core/ui/generic-input/**/*.ts",
+          "libs/core/ui/generic-input/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

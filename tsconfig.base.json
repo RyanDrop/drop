@@ -14,7 +14,9 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@drop/core/ui/generic-input": ["libs/core/ui/generic-input/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
