@@ -1,0 +1,25 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/core/ui/dynamic-forms/src",
+  "prefix": "drop",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/core/ui/dynamic-forms/src/test.ts",
+        "tsConfig": "libs/core/ui/dynamic-forms/tsconfig.spec.json",
+        "karmaConfig": "libs/core/ui/dynamic-forms/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/core/ui/dynamic-forms/**/*.ts",
+          "libs/core/ui/dynamic-forms/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

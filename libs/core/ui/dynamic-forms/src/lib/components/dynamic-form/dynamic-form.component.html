@@ -1,0 +1,7 @@
+<form [formGroup]="form" (ngSubmit)="save.emit(form.value)">
+  <ng-container *ngFor="let field of formConfig" [dropDynamicField]="field">
+  </ng-container>
+  <button type="submit" drop-button="primary" [disabled]="!form.valid">
+    Salvar
+  </button>
+</form>
