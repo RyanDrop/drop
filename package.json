@@ -24,6 +24,7 @@
     "@ngneat/reactive-forms": "^5.0.0",
     "@ngneat/until-destroy": "^9.2.0",
     "@nrwl/angular": "14.3.6",
+    "ngx-mask": "^14.0.2",
     "rxjs": "~7.4.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.4"
