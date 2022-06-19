@@ -1,0 +1,48 @@
+$drop-colors: (
+  'drop-white': #ffffff,
+  'drop-primary': #1f78c3,
+  'drop-secondary': #595959,
+  'drop-gray-01': #f8f9fa,
+  'drop-gray-02': #e9ecef,
+  'drop-gray-03': #ced4da,
+  'drop-gray-04': #9a9a9a,
+  'drop-gray-05': #737373,
+  'drop-gray-06': #585757,
+  'drop-orange': #ffab00,
+  'drop-red': #ef4b4b,
+  'drop-green': #38cb89,
+  'drop-blue-01': #06c0d9,
+  'drop-blue-02': #3e80eb,
+  'drop-blue-03': #10277c,
+  'drop-blue-04': #1866a8,
+  'drop-purple': #664dc9,
+);
+
+$drop-colors-theme-dark: ();
+
+:root {
+  @each $name, $color in $drop-colors {
+    --#{$name}: #{$color};
+  }
+
+  &.dark-mode {
+    @each $name, $color in $drop-colors-theme-dark {
+      --#{$name}: #{$color};
+    }
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    @each $name, $color in $drop-colors {
+      --#{$name}: #{$color} !important;
+    }
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    @each $name, $color in $drop-colors-theme-dark {
+      --#{$name}: #{$color} !important;
+    }
+  }
+}

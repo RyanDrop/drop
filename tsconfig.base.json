@@ -5,17 +5,21 @@
     "sourceMap": true,
     "declaration": false,
     "moduleResolution": "node",
+    "strictPropertyInitialization": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2017", "dom"],
+    "lib": ["es2017", "es2021", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@drop/core/ui/generic-input": ["libs/core/ui/generic-input/src/index.ts"]
+      "@drop/core/ui/dynamic-forms": [
+        "libs/core/ui/dynamic-forms/src/index.ts"
+      ],
+      "@drop/drop/ui/inputs": ["libs/drop/ui/inputs/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

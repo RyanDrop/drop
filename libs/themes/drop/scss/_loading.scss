@@ -1,0 +1,72 @@
+ngx-spinner {
+  h1 {
+    position: relative;
+    top: -21px;
+    color: #005ae6;
+    font-size: 20px;
+    font-weight: 800;
+  }
+}
+
+.loading-text {
+  display: flex;
+  z-index: 99999;
+  flex-direction: column;
+  align-items: center;
+}
+
+$size: 100;
+$degree: -36;
+$delay: -200;
+
+.spinner {
+  margin-bottom: 30px;
+  position: relative;
+  width: $size + px;
+  height: $size + px;
+  border-radius: calc($size/2) + px;
+  transform: scale(0.8);
+
+  span {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: calc($size/2.5) + px;
+    height: $size + px;
+    width: calc($size/5) + px;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      height: calc($size/5) + px;
+      width: calc($size/5) + px;
+      border-radius: calc($size/10) + px;
+      background-color: #005ae6;
+      transform: scale(0);
+      animation: bloop infinite 2s;
+    }
+
+    @for $i from 1 to 10 {
+      &:nth-child(#{$i}) {
+        transform: rotate(($i * $degree) + deg);
+        &::before {
+          animation-delay: ($i * $delay) + ms;
+        }
+      }
+    }
+  }
+}
+
+@keyframes bloop {
+  0% {
+    transform: scale(0.7);
+  }
+  100% {
+    transform: scale(0.7);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.5);
+    opacity: 0.5;
+  }
+}

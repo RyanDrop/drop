@@ -1,0 +1,30 @@
+button {
+  width: 100%;
+  height: 40px;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
+    border 0.2s ease-in-out;
+  border: none;
+  font-family: 'Popins', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &[drop-button='primary'] {
+    background-color: var(--drop-primary);
+    color: var(--drop-white);
+    border: 1px solid var(--drop-primary);
+    border-radius: 5px;
+    &:hover {
+      background-color: var(--drop-blue-04);
+      border: 1px solid var(--drop-blue-04);
+    }
+
+    &:disabled {
+      background-color: var(--drop-gray-02);
+      border: 1px solid var(--drop-gray-02);
+      color: var(--drop-secondary);
+      cursor: not-allowed;
+    }
+  }
+}
