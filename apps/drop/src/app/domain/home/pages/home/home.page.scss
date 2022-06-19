@@ -1,0 +1,16 @@
+:host {
+  display: block;
+  header {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--drop-primary);
+    h1 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--drop-white);
+    }
+  }
+}

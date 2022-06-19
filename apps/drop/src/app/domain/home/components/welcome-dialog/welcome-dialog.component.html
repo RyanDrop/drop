@@ -1,0 +1,18 @@
+<h1>Olá {{ data.name }}, seja bem-vindo!</h1>
+<h2>Seus dados:</h2>
+<ul>
+  <li>Idade: {{ data.age }} anos</li>
+  <li>Altura: {{ data.height }} cm</li>
+  <li>Cidade: {{ data.city }}</li>
+</ul>
+<h1>Seu pokemon inicial é o {{ data.initialPokemon | titlecase }}!</h1>
+<div>
+  <img
+    [src]="
+      'https://img.pokemondb.net/sprites/black-white/anim/normal/' +
+      data.initialPokemon +
+      '.gif'
+    "
+    alt="Charmander"
+  />
+</div>

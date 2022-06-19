@@ -2,8 +2,9 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
-    "core-ui-generic-input": "libs/core/ui/generic-input",
+    "core-ui-dynamic-forms": "libs/core/ui/dynamic-forms",
     "drop": "apps/drop",
-    "drop-e2e": "apps/drop-e2e"
+    "drop-e2e": "apps/drop-e2e",
+    "drop-ui-inputs": "libs/drop/ui/inputs"
   }
 }

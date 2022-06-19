@@ -5,9 +5,7 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/drop",
         "index": "apps/drop/src/index.html",
@@ -15,11 +13,9 @@
         "polyfills": "apps/drop/src/polyfills.ts",
         "tsConfig": "apps/drop/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": [
-          "apps/drop/src/favicon.ico",
-          "apps/drop/src/assets"
-        ],
+        "assets": ["apps/drop/src/favicon.ico", "apps/drop/src/assets"],
         "styles": [
+          "./libs/themes/drop/theme.scss",
           "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
           "apps/drop/src/styles.scss"
         ],
@@ -79,17 +75,12 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": [
-          "apps/drop/**/*.ts",
-          "apps/drop/**/*.html"
-        ]
+        "lintFilePatterns": ["apps/drop/**/*.ts", "apps/drop/**/*.html"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": [
-        "coverage/apps/drop"
-      ],
+      "outputs": ["coverage/apps/drop"],
       "options": {
         "jestConfig": "apps/drop/jest.config.ts",
         "passWithNoTests": true
