@@ -1,0 +1,12 @@
+<div drop-input>
+  <h3>{{ formConfig.label }}</h3>
+  <mat-form-field appearance="outline" floatLabel="never">
+    <mat-label>{{ formConfig.placeholder }}</mat-label>
+    <mat-select [formControlName]="formConfig.controlName">
+      <mat-option>--</mat-option>
+      <mat-option [value]="option" *ngFor="let option of formConfig.options">{{
+        option | titlecase
+      }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
